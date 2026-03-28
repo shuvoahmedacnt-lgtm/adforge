@@ -1,0 +1,19 @@
+// src/App.jsx
+import React from 'react';
+import { useAdStore } from './store/useAdStore';
+import CreatePage from './pages/CreatePage';
+import LibraryPage from './pages/LibraryPage';
+import Header from './components/Header';
+
+export default function App() {
+  const { activeTab, setActiveTab } = useAdStore();
+
+  return (
+    <div className="app-root">
+      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+      <main className="main-content">
+        {activeTab === 'create' ? <CreatePage /> : <LibraryPage />}
+      </main>
+    </div>
+  );
+}

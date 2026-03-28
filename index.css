@@ -1,0 +1,28 @@
+// src/pages/CreatePage.jsx
+import React from 'react';
+import AdForm from '../components/AdForm';
+import AdPreview from '../components/AdPreview';
+
+export default function CreatePage() {
+  return (
+    <div className="create-layout">
+      <div className="form-panel">
+        <div className="panel-header">
+          <h2 className="panel-title">Brief Your Creative</h2>
+          <p className="panel-sub">Tell us about your product and we'll generate a $10K-quality ad</p>
+        </div>
+        <AdForm />
+      </div>
+
+      <div className="divider" />
+
+      <div className="preview-col">
+        <div className="panel-header">
+          <h2 className="panel-title">Live Preview</h2>
+          <p className="panel-sub">Your creative with 3 variants and strategy insights</p>
+        </div>
+        <AdPreview />
+      </div>
+    </div>
+  );
+}
